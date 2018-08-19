@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Khamsat</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="string_for_clients">السوق العربي لبيع وشراء الخدمات المصغرة</string>
+    <string name="string_for_clients_2">أنجز أعمالك أو قدّم خدمات\n للآخرين بدءاً من 5$ فقط</string>
+    <string name="string_for_clients_3">خدمات متنوعة</string>
+
+    <!-- Works Activity -->
+    <string name="works">خدمات أعمال</string>
+    <string name="cv">تصميم السيرة الذاتية بطريقة الانفوجرافيك باحترافية عالية</string>
+    <string name="programming">برمجة المواقع Php / Laravel 5 كل 2 صفحه بسعر 5 دولار</string>
+    <string name="translate">ترجمة من الالمانية الى العربية</string>
+    <string name="feasability_study">دراسة جدوى السوق لمشروعك الالكتروني</string>
+    <string name="voice_record">تسجيل صوتي لخدمة الرد الآلي على الهاتف بصوت</string>
+    <string name="message_writting">كتابة الرسائل والأبحاث العملية فى مجال الهندسة</string>
+    <string name="pdf_edit">عمل تعديلات وتحويل ملفات ال PDF لكل 20 ورقه</string>
+    <string name="wordpress_products">رفع منتجات على وردبريس 20 منتج</string>
+
+    <!-- Programming Activity -->
+    <string name="programming_development">برمجة و تطوير</string>
+    <string name="all_programming">برمجة برامج بكل انواعها</string>
+    <string name="java_solution">حل أي واجب أو سؤال بلغة Java</string>
+    <string name="websites_solutions">حل مشكلات تطوير المواقع الالكترونية في بيئه الNET. (دوت نت)</string>
+    <string name="desktop_apps">برمجة وتصميم تطبيقات خاصة بسطح المكتب Desktop</string>
+    <string name="website_responsive">عمل الموقع Responsive متجاوب مع جميع الأجهزة</string>
+
+    <!-- Electronic Marketing Activity -->
+    <string name="electronic_marketing">تسويق إلالكترونى</string>
+    <string name="hashtag_increase">رفع الهاشتاق ترند في تويتر</string>
+    <string name="instgram_increase">1000 متابع لحسابك على انستغرام</string>
+    <string name="youtube_increase">10000 مشاهدة حقيقية وامنة 100% لاى فيديو يوتيوب</string>
+    <string name="visitor_increase">أقدم لك 20.000 زائر لموقعك لخفض ترتيب أليسكا بـ: 5$ فقط</string>
+    <string name="put_advertisement">ضع اعلانك على أكبر موقع لتقديم الخدمات الصوتية والمرئية</string>
+    <string name="like_increase">سوف أقوم بجلب 1500 لايك عربي لاي بوست في الفيسبوك تختاره</string>
+
+    <!-- Design Activity -->
+    <string name="design">تصميم</string>
+    <string name="video_design">اقدم لك فيديو اعلاني احترافي لموقعك او منتجك بـ5$ فقط لكل 3 ثواني</string>
+    <string name="logo_design">تصميم افضل الشعارات</string>
+    <string name="architectural_design">أصمم لك تصميمات معماريه و ديكورات خارجيه و داخليه</string>
+    <string name="_3D_design">تصميم انترو 3D لشعارك او شعار منتج او شركة</string>
+    <string name="book_design">تصميم (مجلة) (كتاب) (كتالوج) يعبر عنك بإحترافية</string>
+
+    <!-- Design Activity -->
+    <string name="writing_translation">كتابة وترجمة</string>
+    <string name="translation">ترجمة احترافية من الانجليزية للعربية او العكس { 1000 كلمة }</string>
+    <string name="medical_translation">ترجمه طبيه</string>
+    <string name="symantic_checking">تدقيق لغوي ل 1000 كلمة في ثلاث ساعات فقط</string>
+    <string name="school_research">كتابة ابحاث مدرسية بطريقة علميه و ادبيه</string>
+    <string name="video_translation">ترجمة مقاطع الفيديو من الإنجليزية إلى العربية وتسليمها سريعا</string>
+</resources>

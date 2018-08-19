@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:text="أعمال"
+        android:textColor="#000"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:text="برمجة وتطوير"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:text="تسويق الكترونى"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:text="تدريب عن بعد"
+        android:textColor="#000"
+        android:textSize="20dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:text="استشارات ونصائح"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:text="تصميم"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:text="تقنية"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:text="كتابة وترجمة"
+        android:textColor="#000"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="right"
+        android:text="خدمات متنوعة"
+        android:textColor="#000"
+        android:textSize="20dp" />
+</LinearLayout>

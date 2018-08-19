@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorksActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_feasibility_study"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/image_feasibility_study" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/image_feasibility_study"
+                android:text="@string/feasability_study"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#d8e0e1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_voice_record"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/image_voice_record" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/image_voice_record"
+                android:text="@string/voice_record"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#d8e0e1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_message_writting"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_alignParentRight="true"
+                android:layout_margin="-10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/image_message_writting" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/image_message_writting"
+                android:text="@string/message_writting"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#d8e0e1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_pdf_edit"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/image_pdf_edit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/image_pdf_edit"
+                android:text="@string/pdf_edit"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#d8e0e1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_wordpress_products"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_alignParentRight="true"
+                android:layout_margin="-10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/image_wordpress_products" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/image_wordpress_products"
+                android:text="@string/wordpress_products"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

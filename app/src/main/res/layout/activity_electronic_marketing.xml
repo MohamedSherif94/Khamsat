@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ElectronicMarketing">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_hashtag_increase"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/image_hashtag_increase" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/image_hashtag_increase"
+                android:text="@string/hashtag_increase"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#d8e0e1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_instgram_increase"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/image_instgram_increase" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/image_instgram_increase"
+                android:text="@string/instgram_increase"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#d8e0e1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_youtube_increase"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_alignParentRight="true"
+                android:layout_margin="-10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/image_youtube_increase" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/image_youtube_increase"
+                android:text="@string/youtube_increase"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#d8e0e1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_visitor_increase"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_alignParentRight="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/image_visitor_increase" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/image_visitor_increase"
+                android:text="@string/visitor_increase"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#d8e0e1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_like_increase"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_alignParentRight="true"
+                android:layout_margin="-10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/image_like_increase" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/image_like_increase"
+                android:text="@string/like_increase"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:background="#d8e0e1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_put_advertisement"
+                android:layout_width="@dimen/image_width"
+                android:layout_height="@dimen/image_height"
+                android:layout_alignParentRight="true"
+                android:layout_margin="-10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/image_put_advertisement" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/image_put_advertisement"
+                android:text="@string/put_advertisement"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
