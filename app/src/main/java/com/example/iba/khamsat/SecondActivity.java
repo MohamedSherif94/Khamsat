@@ -11,7 +11,7 @@ import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
@@ -20,11 +20,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
-import org.json.JSONException;
 import org.json.simple.JSONObject;
-import org.json.simple.JSONArray;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
@@ -37,36 +36,102 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 
+;
+
 public class SecondActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = SecondActivity.class.getSimpleName();
+    Bitmap image = null;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
-
     private LinearLayout mLinearLayoutDepartments;
     private ImageView mImageViewDepartmentArrow;
     private ImageView mImageViewCubic;
     private TextView mTextViewDepartmentBrowse;
-
     private LinearLayout mLinearLayoutKhamsatCommunity;
     private ImageView mImageViewKhmsatCommunityArrow;
     private ImageView mImageViewChat;
     private TextView mTextViewKhamsatCommunity;
-
     private ImageView mImageViewHomeBackground;
-    private String imageUrl = "https://mohamed-sherif.000webhostapp.com/images/image_logo.jpg";
 
-    private JSONArray jsonArrayData;
     private JSONObject jsonObjectData;
-    private String stringJSON;
+    private String imageUrl = "https://mohamed-sherif.000webhostapp.com/images/";
+    private String imageName = "";
+    ArrayList<MyImage> images = new ArrayList<>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        Toolbar mToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        initializeComponents();
+
+        displayImages();
+    }
+
+
+    public void displayImages() {
+        class GetImage extends AsyncTask<String, Void, String> {
+            ProgressDialog loading;
+
+            @Override
+            protected void onPreExecute() {
+                super.onPreExecute();
+                loading = ProgressDialog.show(SecondActivity.this, "Downloading images...PLZ wait", null, true, true);
+            }
+
+            @Override
+            protected void onPostExecute(String result) {
+                super.onPostExecute(result);
+                loading.dismiss();
+
+                ImageArrayAdapter imageArrayAdapter = new ImageArrayAdapter(SecondActivity.this, images);
+                ListView listView = findViewById(R.id.list_view_image);
+                listView.setAdapter(imageArrayAdapter);
+            }
+
+            @Override
+            protected String doInBackground(String... params) {
+                String result = "";
+                URL url = null;
+                String stringUrl = "https://mohamed-sherif.000webhostapp.com/getImage.php";
+                try {
+                    url = new URL(stringUrl);
+                    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                    InputStream inputStream = httpURLConnection.getInputStream();
+                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                    String line = "";
+                    while ((line = bufferedReader.readLine()) != null) {
+                        result += line;
+                    }
+                    bufferedReader.close();
+                    inputStream.close();
+                    httpURLConnection.disconnect();
+                    Log.v(TAG, result);
+                    JSONParser jsonParser = new JSONParser();
+                    try {
+                        jsonObjectData = (JSONObject) jsonParser.parse(result);
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    getImage();
+                } catch (MalformedURLException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                return result;
+            }
+        }
+
+        GetImage gi = new GetImage();
+        gi.execute("image_logo.jpg");
+    }
+
+    public void initializeComponents() {
+        Toolbar mToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(mToolbar);
 
         // Departments browse
@@ -95,9 +160,6 @@ public class SecondActivity extends AppCompatActivity
 
         mImageViewHomeBackground = findViewById(R.id.image_home_background);
 
-        getImage();
-
-
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mToggle = new ActionBarDrawerToggle(
                 this, mDrawerLayout, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -106,79 +168,14 @@ public class SecondActivity extends AppCompatActivity
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    public void getImage() throws IOException {
 
-    public void getImage(){
-        class GetImage extends AsyncTask<String,Void,String> {
-            ProgressDialog loading;
-
-            @Override
-            protected void onPreExecute() {
-                super.onPreExecute();
-                loading = ProgressDialog.show(SecondActivity.this, "Uploading...", null,true,true);
-            }
-
-            @Override
-            protected void onPostExecute(String result) {
-                String imageName = "";
-                Bitmap image = null;
-                super.onPostExecute(result);
-                loading.dismiss();
-                // mImViewAllProgramming.setImageBitmap(b);
-
-                JSONParser jsonParser = new JSONParser();
-                try {
-                    jsonArrayData = (JSONArray) jsonParser.parse(result);
-                    jsonObjectData = (JSONObject) jsonArrayData.get(1);
-                    imageName = (String) jsonObjectData.get("1");
-                    //Log.v(TAG, imageName);
-                    //imageUrl = imageUrl+imageName;
-                     image = BitmapFactory.decodeStream((InputStream)new URL(imageUrl).getContent());
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                ArrayList<MyImage> images = new ArrayList<>();
-                images.add(new MyImage(imageName, image));
-                ImageArrayAdapter imageArrayAdapter = new ImageArrayAdapter(SecondActivity.this, images);
-                ListView listView = findViewById(R.id.list_view_image);
-                listView.setAdapter(imageArrayAdapter);
-            }
-
-            @Override
-            protected String doInBackground(String... params) {
-                String imageName = params[0];
-                String result = "";
-                URL url = null;
-                String stringUrl = "https://mohamed-sherif.000webhostapp.com/getImage.php";
-                try {
-                    url = new URL(stringUrl);
-                    HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                    InputStream inputStream = httpURLConnection.getInputStream();
-                    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
-                    String line = "";
-                    while ((line = bufferedReader.readLine()) != null) {
-                        result += line;
-                    }
-                    bufferedReader.close();
-                    inputStream.close();
-                    httpURLConnection.disconnect();
-                    stringJSON = result;
-                    Log.v(TAG, result);
-                } catch (MalformedURLException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                return result;
-            }
+        for (int i = 0; i <= 10; i++){
+            imageName = jsonObjectData.get( "1" ).toString();
+            Log.v(TAG, "kkkkkkkkkkkkkkkkkkk  "+imageUrl);
+            image = BitmapFactory.decodeStream((InputStream) new URL(imageUrl + imageName).getContent());
+            images.add(new MyImage(imageName, image));
         }
-
-        GetImage gi = new GetImage();
-        gi.execute("image_logo.jpg");
     }
 
     @Override
@@ -186,14 +183,6 @@ public class SecondActivity extends AppCompatActivity
         return false;
     }
 
-    //    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//
-//        if (mToggle.onOptionsItemSelected(item)) {
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item != null && item.getItemId() == android.R.id.home) {
